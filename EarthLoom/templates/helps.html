@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <h1 class="mb-4">Organic Vegetable Portal Q&A</h1>
+        
+            <!-- Search Bar -->
+            <div class="mb-4">
+                <input type="text" class="form-control" id="searchBar" placeholder="Search Q&A...">
+            </div>
+        
+            <!-- Q&A Section -->
+            <div class="accordion" id="qaAccordion">
+                <!-- Q&A Item 1 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a1" aria-expanded="false" aria-controls="a1">
+                            Q: How to grow organic tomatoes?
+                        </button>
+                    </h2>
+                    <div id="a1" class="accordion-collapse collapse" aria-labelledby="q1" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: To grow organic tomatoes, make sure to use organic seeds, soil, and fertilizers. Avoid synthetic pesticides and opt for natural alternatives.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 2 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a2" aria-expanded="false" aria-controls="a2">
+                            Q: What are the benefits of organic farming?
+                        </button>
+                    </h2>
+                    <div id="a2" class="accordion-collapse collapse" aria-labelledby="q2" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Organic farming has various benefits, including healthier produce, soil conservation, and reduced environmental impact.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 3 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a3" aria-expanded="false" aria-controls="a3">
+                            Q: Can I use compost as fertilizer for my organic garden?
+                        </button>
+                    </h2>
+                    <div id="a3" class="accordion-collapse collapse" aria-labelledby="q3" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Yes, compost is an excellent organic fertilizer. It improves soil structure and provides essential nutrients to plants.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 4 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a4" aria-expanded="false" aria-controls="a4">
+                            Q: What vegetables are suitable for growing in containers?
+                        </button>
+                    </h2>
+                    <div id="a4" class="accordion-collapse collapse" aria-labelledby="q4" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Vegetables like tomatoes, peppers, herbs, and salad greens are well-suited for container gardening.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 5 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a5" aria-expanded="false" aria-controls="a5">
+                            Q: How to control pests in an organic garden?
+                        </button>
+                    </h2>
+                    <div id="a5" class="accordion-collapse collapse" aria-labelledby="q5" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Use natural pest control methods such as neem oil, companion planting, and introducing beneficial insects.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 6 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q6">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a6" aria-expanded="false" aria-controls="a6">
+                            Q: Is it possible to grow organic vegetables indoors?
+                        </button>
+                    </h2>
+                    <div id="a6" class="accordion-collapse collapse" aria-labelledby="q6" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Yes, you can grow organic vegetables indoors using containers, grow lights, and organic potting mix.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 7 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q7">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a7" aria-expanded="false" aria-controls="a7">
+                            Q: Are there specific planting seasons for organic vegetables?
+                        </button>
+                    </h2>
+                    <div id="a7" class="accordion-collapse collapse" aria-labelledby="q7" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Planting seasons vary based on the region, but generally, spring and fall are suitable for many organic vegetables.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Q&A Item 8 -->
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="q8">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#a8" aria-expanded="false" aria-controls="a8">
+                            Q: Can I use rainwater for watering my organic garden?
+                        </button>
+                    </h2>
+                    <div id="a8" class="accordion-collapse collapse" aria-labelledby="q8" data-bs-parent="#qaAccordion">
+                        <div class="accordion-body">
+                            A: Yes, using rainwater is an eco-friendly option for watering your organic garden. It's free from chemicals and promotes plant health.
+                        </div>
+                    </div>
+                </div>
+        
+                <!-- Add more Q&A items as needed -->
+            </div>
+        
+        </div>
+        <div class="col-md-2">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link"  href="profile.html">Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="edit.html">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="newpass.html">Passward and Security</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="helps.html">Help and Support</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="report.html">Report</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-danger" href="index.html">Logout</a>
+                  </li>
+              </ul>
+        </div>
+
+    </div>
+</div>
+{% endblock content %}

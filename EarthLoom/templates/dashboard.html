@@ -1,0 +1,464 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+
+<div class="container" style="margin-left: 130px;" >
+  <br><br>
+</div>
+
+<div class="container-fluid">
+  <div class="row" >
+
+    <div class="col-md-2 border border-success" style="background-color:rgb(39, 39, 39);border-radius: 25px;">
+      <ul class="nav flex-column nav-tabs">
+        <br><br>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="dashboard.html">Main</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="vegetable.html">Vegetables</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="fruits.html">Fruits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="dryfruit.html">Dryfruits</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="store.html">Organic Products</a>
+        </li>
+      
+        <div>
+          <br>
+          <br>
+          <a href="#section1" class="btn btn-success btn-lg">Daily Offers</a>
+          <br><br><br>
+          <a href="#section2" class="btn btn-success btn-lg">Best Sellers</a>
+          <br><br><br>
+          <a href="#section3" class="btn btn-success btn-lg">Special Offers</a>
+          <br><br><br>
+          <a href="#section4" class="btn btn-success btn-lg">Special Offers</a>
+          <br><br><br>
+        </div>
+      </ul>
+    </div>
+
+    <div class="col-md-10">
+      <div class="row border border-secondary border-2" style="background-color: azure; border-radius: 25px;">
+        <h1>Vegetables</h1>
+        <div class="col-md-3 "  >
+          <div class="card border-dark border " style="width: 18rem;">
+            <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body ">
+              <h5 class="card-title">Tomato</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3">
+          <div class="card  border-dark" style="width: 18rem;">
+            <img src="{% static 'onion.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Onion</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    
+      
+        <div class="col-md-3">
+          <div class="card  border-dark" style="width: 18rem;">
+            <img src="{% static 'carrot.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Carrot</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+              <a href="vegetable.html">more>></a>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <br>
+      <br>
+      <div class="row border border-secondary border-2" style="background-color: azure; border-radius: 25px;">
+        <h1>Fruits</h1>
+      <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'banana.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Banana</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'guava.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Guava</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'orange.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Orange</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            <a href="fruits.html">more>></a>
+          </div>
+        </div>
+      </div>
+      </div>
+      <br><br>
+      <div class="row border border-secondary border-2" style="background-color: azure; border-radius: 25px;">
+        <h1>Dry Fruits</h1>
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'kaju.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Kaju(Cashew nuts)</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'badam.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Badam(Almond)</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    
+      
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'manuke.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Manuke(Dried grapes)</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+              <a href="dryfruit.html">more>></a>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <br><br>
+      <div class="row border border-secondary border-2" style="background-color: azure; border-radius: 25px;">
+        <h1>Cerels</h1>
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'rice.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Rice</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'jowar.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Jowar</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    
+      
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'wheat.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Wheat</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+              <a href="store.html">more>></a>
+            </div>
+          </div>
+        </div> 
+      </div>
+    </div>
+         
+  <div>
+    <div>
+      <br><br>
+      <h1 style="background-color: goldenrod;text-align: center;">Offer Section</h1>  
+      </div>
+      <section id="section1">
+        <div class="container">
+          <br>
+          <h1 style="background-color:rgb(146, 168, 209)">* Daily Offers</h1>
+          <br>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'offerfruits.webp' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                  <a href="offers.html">more>></a>
+                </div>
+              </div>
+            </div>
+        </div>
+      </section>
+      
+      <section id="section2">
+        <div class="container">
+          <br><br><br>
+          <h1 style="background-color: rgb(136, 176, 75)">* Best Sellers</h1>
+          <br>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                  <a href="offers.html">more>></a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </section>
+  
+      <section id="section3">
+        <div class="container">
+          <br><br><br>
+          <h1 style="background-color:rgb(247, 202, 201);">* Special Offers</h1>
+          <br>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                  <a href="offers.html">more>></a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </section>
+  
+      <section id="section4">
+        <div class="container">
+          <br><br><br>
+          <h1 style="background-color:#6B5B95;">* Best Offers</h1>
+          <br>
+          <div class="row ">
+            <div class="col-md-3 ">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                </div>
+              </div>
+            </div>
+        
+            <div class="col-md-3">
+              <div class="card border-dark" style="width: 18rem;">
+                <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Somes content.</p>
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+                  <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+                  <a href="offers.html">more>></a>
+                </div>
+              </div>
+            </div>
+            
+        </div>
+      </section>
+  </div> 
+
+  </div>
+  <br>
+  <br>
+</div>
+
+    <style>
+        /* Basic styling for demonstration purposes */
+        .product-container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .quantity-input {
+            width: 50px;
+        }
+        .col-md-3{
+          margin-left: 60px;
+        }
+        .card{
+          background-color: rgb(122, 187, 122);
+        }
+        
+    </style>
+
+<script>
+    function addToCart() {
+        // Get the quantity value
+        var quantity = document.getElementById('quantity').value;
+
+        // You can perform further actions here, like adding the product to the shopping cart
+
+        // For demonstration purposes, let's just show an alert
+        alert('Added ' + quantity + ' items to the cart.');
+    }
+</script>
+
+
+
+{% endblock content %}

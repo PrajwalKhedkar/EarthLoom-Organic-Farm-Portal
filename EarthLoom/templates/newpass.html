@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <h1 class="mb-4">Change Password</h1>
+        
+            <!-- Change Password Form -->
+            <form>
+              <div id="step1">
+                <div class="mb-3">
+                    <label for="email" class="form-label">Enter your Email:</label>
+                    <input type="email" class="form-control form-control-lg" id="email" required/>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary btn-lg" onclick="showChangePasswordForm()">Continue</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Change Password Form (Initially Hidden) -->
+            <div id="step2" class="hidden">
+                <form>
+                    <!-- Add fields for changing password here -->
+                    <div class="mb-3">
+                        <label for="newPassword" class="form-label">New Password:</label>
+                        <input type="password" class="form-control form-control-lg" id="newPassword" required/>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="confirmPassword" class="form-label">Confirm New Password:</label>
+                        <input type="password" class="form-control form-control-lg" id="confirmPassword" required/>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-primary btn-lg">Change Password</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Back Button -->
+            <div class="mt-4 pt-2" style="text-align: center;">
+                <button class="btn btn-outline-primary btn-lg" onclick="goBack()">Back</button>
+            </div>
+        
+                <!-- Change Password Button -->
+                <button type="submit" class="btn btn-primary">Change Password</button>
+            </form>
+        </div>
+        <div class="col-md-2">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link " href="profile.html">Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="edit.html">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="newpass.html">Passward and Security</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="helps.html">Help and Support</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="report.html">Report</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-danger" href="index.html">Logout</a>
+                  </li>
+              </ul>
+        </div>
+    </div>
+</div>
+{% endblock content %}

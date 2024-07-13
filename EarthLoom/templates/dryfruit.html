@@ -1,0 +1,189 @@
+{% extends "base.html" %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="container-fluid">
+  <div class="row">
+  
+    <div class="col-md-2" style="background-color:rgb(39, 39, 39);">
+        <ul class="nav flex-column nav-tabs">
+          <br><br>
+          <li class="nav-item">
+            <a class="nav-link "  href="dashboard.html">Main</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="vegetable.html">Vegetables</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="fruits.html">Fruits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="dryfruit.html" >Dryfruits</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="store.html">Cerels</a>
+          </li>
+        </ul>
+    </div>
+
+    <div class="col-md-10">
+      <div class="row">
+        <h1>Vegetables</h1>
+
+        <div class="col-md-3"  >
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body ">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+    
+        <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+  
+        <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            <a href="">more>></a>
+          </div>
+        </div>
+        </div> 
+      </div>
+
+        <br><br><br>
+    
+      <div class="row">
+        <h1>Vegetables</h1>
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+              <a href="">more>></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+        <br><br><br>
+
+      <div class="row">
+        <h1>Vegetables</h1>
+        <div class="col-md-3">
+          <div class="card border-dark" style="width: 18rem;">
+            <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+            <div class="card-body">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">Somes content.</p>
+              <label for="quantity">Quantity:</label>
+              <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+              <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+    
+        <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        </div>
+  
+    
+        <div class="col-md-3">
+        <div class="card border-dark" style="width: 18rem;">
+          <img src="{% static 'tomato.jpg' %}" class="card-img-top" alt="..." style="height:200px;">
+          <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">Somes content.</p>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" class="quantity-input" value="1" min="1">
+            <button onclick="addToCart() " class="btn btn-primary">Add to Cart</button>
+            <a href="">more>></a>
+          </div>
+        </div>
+        </div> 
+      </div>
+    </div>
+
+  <div>
+</div>
+
+<style>
+  /* Basic styling for demonstration purposes */
+  .product-container {
+      max-width: 400px;
+      margin: 0 auto;
+  }
+  .quantity-input {
+      width: 50px;
+  }
+  .col-md-3{
+    margin-left: 60px;
+  }
+  .card{
+    background-color: rgb(122, 187, 122);
+  }
+  
+</style>
+{% endblock content %}

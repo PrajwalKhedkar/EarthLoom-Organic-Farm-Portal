@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-10">
+            <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
+            <h1 class="user-info">John Doe</h1>
+            <p class="bio">Web Developer | Passionate about coding and technology.</p>
+        
+            <h2>Contact Information</h2>
+            <p class="contact-info">Email: john.doe@example.com</p>
+            <p class="contact-info">Twitter: @johndoe</p>
+            <p class="contact-info">LinkedIn: linkedin.com/in/johndoe</p>
+        </div>
+        <div class="col-md-2">
+            <ul class="nav nav-pills flex-column">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="profile.html">Account</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="edit.html">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="newpass.html">Passward and Security</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="helps.html">Help and Support</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="report.html">Report</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-outline-danger" href="index.html">Logout</a>
+                  </li>
+              </ul>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content %}
+
