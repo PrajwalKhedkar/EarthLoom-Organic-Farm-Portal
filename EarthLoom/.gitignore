@@ -1,0 +1,53 @@
+elapp\_pycache_\
+migrations
+EarthLoom.zip
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django stuff
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Media & Static (if generated)
+media/
+staticfiles/
+
+# Environment variables
+.env
+.env.*
+
+# Migrations (optional - usually keep them)
+# */migrations/*
+# !*/migrations/__init__.py
+
+# IDE files
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node (if using React/Vite inside project)
+node_modules/
+dist/
+build/
+
+# Docker (if used)
+*.pid
+*.sock
